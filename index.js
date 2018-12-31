@@ -9,6 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(logger('dev'));
+app.use(errorHandler());
 
 const url = 'mongodb://localhost:27017/edx';
 mongoose.connect(url, { useNewUrlParser: true });
